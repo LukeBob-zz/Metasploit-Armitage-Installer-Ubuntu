@@ -36,27 +36,6 @@ def Install_Dependencys():
     print("\n\t [#] Dependencys Installed [#]\n\n")
     time.sleep(2)
 
-def Install_Ruby():
-    print("\n\t [#] Installing Ruby [#]\n\n")
-    time.sleep(2)
-    Rub = """
-    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-    curl -sSL https://get.rvm.io -o rvm.sh
-    cat rvm.sh | bash -s stable
-    """
-    Rub2 = """
-    RUBYVERSION=$(wget https://raw.githubusercontent.com/rapid7/metasploit-framework/master/.ruby-version -q -O - )
-    rvm install $RUBYVERSION
-    rvm use $RUBYVERSION --default
-    ruby -v
-    """
-    cmd1 = "chmod +x %s/rvm_source.sh"%(this_dir)
-    os.system(cmd1)
-    os.system(Rub)
-    subprocess.call(this_dir+"/rvm_source.sh", shell=True)
-    os.system(Rub2)
-    print("\n\t [#] Ruby Installed [#]\n\n")
-    time.sleep(2)
 
 def Install_Nmap():
     print("\n\t [#] Installing Nmap [#]\n\n")
