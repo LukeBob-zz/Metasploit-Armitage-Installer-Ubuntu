@@ -21,6 +21,7 @@ Metasploit and Armitage installer for Ubuntu 16.04
      cat database.yml > /opt/metasploit-framework/config/database.yml
      sh -c "echo export MSF_DATABASE_CONFIG=/opt/metasploit-framework/config/database.yml >> /etc/profile"
      source /etc/profile
+     sudo -s
      su postgres    
      createuser msf -P -S -R -D
      createdb -O msf msf
