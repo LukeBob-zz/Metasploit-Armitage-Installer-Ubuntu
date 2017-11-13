@@ -71,10 +71,9 @@ def Install_Nmap():
     time.sleep(2)
 
 def Configure_Postgresql():
-    print("\n\t Configuring Postgressql For Metasploit\n\n")
+    print("\n\t Configuring Postgresql For Metasploit\n\n")
     time.sleep(2)
     post = """
-    sudo -s
     su postgres
     createuser msf -P -S -R -D
     createdb -O msf msf
