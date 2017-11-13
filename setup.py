@@ -37,9 +37,10 @@ def Install_Ruby():
     print("\n\t Installing Ruby\n\n")
     time.sleep(2)
     Rub = """
-    cd ~/
     curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
     curl -L https://get.rvm.io | bash -s stable 
+    """
+    Rub1= """
     source /etc/profile.d/rvm.sh
     echo 'source /etc/profile.d/rvm.sh' >> ~/.bashrc
     source ~/.bashrc
@@ -47,7 +48,10 @@ def Install_Ruby():
     rvm use $RUBYVERSION --default
     ruby -v
     """
+    
     os.system(Rub)
+    time.sleep(1) ## Debugging purposes
+    os.system(Rub1)
     print("\n\tRuby Installed\n")
     time.sleep(2)
 
