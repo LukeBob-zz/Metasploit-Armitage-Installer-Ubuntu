@@ -39,7 +39,7 @@ def Install_Ruby():
     Rub = """
     cd ~/
     curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
-    curl -L https://get.rvm.io | bash -s stable
+    curl -L https://get.rvm.io | bash -s stable 
     source /etc/profile.d/rvm.sh
     echo 'source /etc/profile.d/rvm.sh' >> ~/.bashrc
     source ~/.bashrc
@@ -77,7 +77,6 @@ def Configure_Postgresql():
     su postgres
     createuser msf -P -S -R -D
     createdb -O msf msf
-    exit
     exit
     """
 
