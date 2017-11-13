@@ -23,8 +23,9 @@ Metasploit and Armitage installer for Ubuntu 16.04
      source /etc/profile
      su postgres    
      createuser msf -P -S -R -D  ## you might see error could not switch directorys insufficient permissions, 
-     createdb -O msf msf         ## It's ok the database and user are still being made
-     exit                        
+     createdb -O msf msf         ## It's ok the database and user are still being made,
+     exit                        ## when prompted for a password use msf to avoid confusion
+                            
      
  
 # Finally
