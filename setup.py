@@ -10,27 +10,32 @@ import time
 Cur_Dir = __file__
 
 def Install_Java():
-    print("\n\t Installing Java\n")
+    print("\n\t Installing Java\n\n")
+    time.sleep(2)
     repo = """
     add-apt-repository -y ppa:webupd8team/java
     apt-get update
     apt-get -y install oracle-java8-installer
     """
     os.system(repo)
-    print("\n\t Java Installed\n")
+    print("\n\t Java Installed\n\n")
+    time.sleep(2)    
 
 def Install_Dependencys():
-    print("\n\t Installing Dependencys")
+    print("\n\t Installing Dependencys\n\n")
+    time.sleep(2)
     Deps = """
     apt-get update
     apt-get upgrade
     apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev libreadline5 libsqlite3-dev libpcap-dev git-core autoconf postgresql pgadmin3 curl zlib1g-dev libxml2-dev libxslt1-dev vncviewer libyaml-dev curl zlib1g-dev
     """
     os.system(Deps)
-    print("\n\t Dependencys Installed")
+    print("\n\t Dependencys Installed\n\n")
+    time.sleep(2)
 
 def Install_Ruby():
-    print("\n\t Installing Ruby\n")
+    print("\n\t Installing Ruby\n\n")
+    time.sleep(2)
     Rub = """
     cd ~/
     curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
@@ -45,9 +50,11 @@ def Install_Ruby():
     """
     os.system(Rub)
     print("\n\tRuby Installed\n")
+    time.sleep(2)
 
 def Install_Nmap():
-    print("\n\tInstalling Nmap\n")
+    print("\n\tInstalling Nmap\n\n")
+    time.sleep(2)
     nm = """
     mkdir ~/Development
     cd ~/Development
@@ -60,10 +67,12 @@ def Install_Nmap():
     """
 
     os.system(nm)
-    print("\n\tInstalled Nmap\n")
+    print("\n\tInstalled Nmap\n\n")
+    time.sleep(2)
 
 def Configure_Postgresql():
-    print("\n\t Configuring Postgressql For Metasploit\n")
+    print("\n\t Configuring Postgressql For Metasploit\n\n")
+    time.sleep(2)
     post = """
     sudo -s
     su postgres
@@ -74,10 +83,12 @@ def Configure_Postgresql():
     """
 
     os.system(post)
-    print("\nPostgresql Configured\n")
+    print("\nPostgresql Configured\n\n")
+    time.sleep(2)
 
 def Install_Metasploit():
-    print("\n\tInstalling Metasploit Framework\n")
+    print("\n\tInstalling Metasploit Framework\n\n")
+    time.sleep(2)
     meta = """
     cd /opt
     git clone https://github.com/rapid7/metasploit-framework.git
@@ -90,11 +101,13 @@ def Install_Metasploit():
     """
 
     os.system(meta)
-    print("\n\t Installed Metasploit Framework\n")
+    print("\n\t Installed Metasploit Framework\n\n")
+    time.sleep(2)
 
 
 def Install_Armitage():
-    print("\n\t Installing Armitage")
+    print("\n\t Installing Armitage\n\n")
+    time.sleep(2)
     armit = """
     curl -# -o /tmp/armitage.tgz http://www.fastandeasyhacking.com/download/armitage150813.tgz
     tar -xvzf /tmp/armitage.tgz -C /opt
@@ -116,6 +129,7 @@ def Install_Armitage():
     os.system(chdir)
     os.system(cet)
     print("\n\t Armitage Installed\n")
+    time.sleep(2)
 
 def main():
     try:
