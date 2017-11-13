@@ -132,9 +132,9 @@ def main():
         Install_Java()
         Install_Dependencys()
         Install_Ruby()
-        Install_Nmap()
-        Configure_Postgresql()
+        Install_Nmap() 
         Install_Metasploit()
+        Configure_Postgresql()
         Install_Armitage()
     except: raise
     exit(0)
