@@ -43,7 +43,7 @@ def Install_Ruby():
     rvm use $RUBYVERSION --default
     ruby -v
     """
-    os.system(rub)
+    os.system(Rub)
     print("\n\tRuby Installed\n")
 
 def Install_Nmap():
