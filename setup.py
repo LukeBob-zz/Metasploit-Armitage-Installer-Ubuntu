@@ -43,8 +43,7 @@ def Install_Ruby():
     source /etc/profile.d/rvm.sh
     echo 'source /etc/profile.d/rvm.sh' >> ~/.bashrc
     source ~/.bashrc
-    RUBYVERSION=$(wget https://raw.githubusercontent.com/rapid7/metasploit-framework/master/.ruby-version -q -O - )
-    rvm install $RUBYVERSION
+    RUBYVERSION=2.4.2
     rvm use $RUBYVERSION --default
     ruby -v
     """
