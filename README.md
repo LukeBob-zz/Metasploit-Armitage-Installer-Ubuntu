@@ -1,6 +1,6 @@
 # Metasploit-Armitage-Installer-Ubuntu
 Metasploit and Armitage installer for Ubuntu 16.04 
-# WARNING NOT TESTED!!!!
+
 
 # Install Ruby Like So...
     curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
