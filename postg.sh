@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 su postgres
 echo "Creating User msf"
