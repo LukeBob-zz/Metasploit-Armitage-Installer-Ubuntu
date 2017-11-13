@@ -7,6 +7,10 @@
 import os
 import time
 import subprocess
+import inspect, os
+
+this_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) # script directory
+
 
 def Install_Java():
     print("\n\t [#] Installing Java [#]\n\n")
@@ -47,7 +51,7 @@ def Install_Ruby():
     ruby -v
     """
     os.system(Rub)
-    subprocess.call("./rvm_sorce.sh", shell=True)
+    subprocess.call(this_dir+"rvm_sorce.sh", shell=True)
     os.system(Rub2)
     print("\n\t [#] Ruby Installed [#]\n\n")
     time.sleep(2)
