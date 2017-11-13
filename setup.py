@@ -7,7 +7,6 @@
 import os
 import time
 
-Cur_Dir = __file__
 
 def Install_Java():
     print("\n\t [#] Installing Java [#]\n\n")
@@ -36,22 +35,24 @@ def Install_Dependencys():
 def Install_Ruby():
     print("\n\t [#] Installing Ruby [#]\n\n")
     time.sleep(2)
-    Rub = """
-    curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
-    curl -L https://get.rvm.io | bash -s stable 
-    """
-    Rub1= """
+    Rub =  "curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -"
+    Rub1 = "curl -L https://get.rvm.io | bash -s stable" 
+    
+    Rub2 = """
     source /etc/profile.d/rvm.sh
     echo 'source /etc/profile.d/rvm.sh' >> ~/.bashrc
     source ~/.bashrc
-    RUBYVERSION=2.4.2
-    rvm use $RUBYVERSION --default
+
+    rvm use 2.4.2 --default
     ruby -v
     """
     
     os.system(Rub)
     time.sleep(1) ## Debugging purposes
     os.system(Rub1)
+    time.sleep(1)
+    print("trying source")
+    os.system(Rub2)
     print("\n\t [#] Ruby Installed [#]\n\n")
     time.sleep(2)
 
@@ -82,7 +83,7 @@ def Install_Metasploit():
     git clone https://github.com/rapid7/metasploit-framework.git
     chown -R root /opt/metasploit-framework
     cd metasploit-framework
-    rvm --default use ruby-${RUBYVERSION}@metasploit-framework
+    rvm --default use ruby-2.4.2@metasploit-framework
     gem install bundler
     bundle install
     bash -c 'for MSF in $(ls msf*); do ln -s /opt/metasploit-framework/$MSF /usr/local/bin/$MSF;done'
@@ -106,8 +107,6 @@ def Install_Armitage():
     touch /opt/metasploit-framework/config/database.yml
     """
     os.system(armit)
-    dir_path = os.path.dirname(os.realpath(Cur_Dir))
-    chdir = "cd {0}".format(dir_path)
 
     cet   = """
     cat database.yml > /opt/metasploit-framework/config/database.yml
