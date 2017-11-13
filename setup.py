@@ -26,8 +26,8 @@ def Install_Dependencys():
     time.sleep(2)
     Deps = """
     apt-get update
-    apt-get upgrade
-    apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev libreadline5 libsqlite3-dev libpcap-dev git-core autoconf postgresql pgadmin3 curl zlib1g-dev libxml2-dev libxslt1-dev vncviewer libyaml-dev curl zlib1g-dev
+    apt-get -y upgrade
+    apt-get -y install build-essential libreadline-dev libssl-dev libpq5 libpq-dev libreadline5 libsqlite3-dev libpcap-dev git-core autoconf postgresql pgadmin3 curl zlib1g-dev libxml2-dev libxslt1-dev vncviewer libyaml-dev curl zlib1g-dev
     """
     os.system(Deps)
     print("\n\t Dependencys Installed\n\n")
