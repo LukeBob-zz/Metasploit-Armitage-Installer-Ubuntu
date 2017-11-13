@@ -1,5 +1,5 @@
-# Metasploit-Armitage-Installer-Ubuntu-Debian
-metasploit and armitage installer for ubuntu 16.04 and debian based distros
+# Metasploit-Armitage-Installer-Ubuntu
+metasploit and armitage installer for ubuntu 16.04 
 # WARNING NOT TESTED!!!!
 
 # Install Ruby Like So...
