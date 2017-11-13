@@ -42,15 +42,13 @@ def Install_Ruby():
     git clone git://github.com/sstephenson/rbenv.git .rbenv
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
     echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-    exec $SHELL
-
+   
     git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
     echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 
   
     git clone git://github.com/dcarley/rbenv-sudo.git ~/.rbenv/plugins/rbenv-sudo
 
-    exec $SHELL
 
     RUBYVERSION=$(wget https://raw.githubusercontent.com/rapid7/metasploit-framework/master/.ruby-version -q -O - )
     rbenv install $RUBYVERSION
