@@ -77,7 +77,6 @@ def Configure_Postgresql():
     su postgres
     createuser msf -P -S -R -D
     createdb -O msf msf
-    exit
     """
 
     os.system(post)
