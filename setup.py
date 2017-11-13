@@ -50,6 +50,8 @@ def Install_Ruby():
     rvm use $RUBYVERSION --default
     ruby -v
     """
+    cmd1 = "chmod +x %s/rvm_source.sh"%(this_dir)
+    os.system(cmd1)
     os.system(Rub)
     subprocess.call(this_dir+"/rvm_source.sh", shell=True)
     os.system(Rub2)
