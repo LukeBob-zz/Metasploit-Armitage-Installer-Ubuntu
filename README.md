@@ -13,6 +13,6 @@ metasploit and armitage installer for ubuntu 16.04 and debian based distros
     rvm use $RUBYVERSION --default
     ruby -v
     
-# Simply Run
+# Then Simply Run
     python3 setup.py
     bash postg.sh
