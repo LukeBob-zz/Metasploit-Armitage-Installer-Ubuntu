@@ -51,7 +51,7 @@ def Install_Ruby():
     ruby -v
     """
     os.system(Rub)
-    subprocess.call(this_dir+"/rvm_sorce.sh", shell=True)
+    subprocess.call(this_dir+"/rvm_source.sh", shell=True)
     os.system(Rub2)
     print("\n\t [#] Ruby Installed [#]\n\n")
     time.sleep(2)
