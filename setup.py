@@ -1,3 +1,9 @@
+## Author: Luke Bob
+##
+## information gathered from https://www.darkoperator.com/installing-metasploit-in-ubunt/
+##
+
+#!/usr/bin/python3
 import os
 import time
 
