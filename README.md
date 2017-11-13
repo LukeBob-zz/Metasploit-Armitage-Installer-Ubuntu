@@ -7,6 +7,7 @@ metasploit and armitage installer for ubuntu 16.04
     curl -L https://get.rvm.io | bash -s stable
     source /etc/profile.d/rvm.sh
     echo "source /etc/profile.d/rvm.sh" >> ~/.bashrc
+    
     source ~/.bashrc
     RUBYVERSION=$(wget https://raw.githubusercontent.com/rapid7/metasploit-framework/master/.ruby-version -q -O - )
     rvm install $RUBYVERSION
