@@ -6,7 +6,7 @@
 #!/usr/bin/python3
 import os
 import time
-
+import subprocess
 
 def Install_Java():
     print("\n\t [#] Installing Java [#]\n\n")
@@ -38,25 +38,13 @@ def Install_Ruby():
   
     
     Rub = """
-    cd ~
-    git clone git://github.com/sstephenson/rbenv.git .rbenv
-    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-   
-    git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-    echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-
-  
-    git clone git://github.com/dcarley/rbenv-sudo.git ~/.rbenv/plugins/rbenv-sudo
-
-
-    RUBYVERSION=$(wget https://raw.githubusercontent.com/rapid7/metasploit-framework/master/.ruby-version -q -O - )
-    rbenv install $RUBYVERSION
-    rbenv global $RUBYVERSION
-    ruby -v
+    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+    curl -sSL https://get.rvm.io -o rvm.sh
+    cat rvm.sh | bash -s stable
     """
   
     os.system(Rub)
+    subprocess.call("./rvm_sorce.sh", shell=true)
     print("\n\t [#] Ruby Installed [#]\n\n")
     time.sleep(2)
 
