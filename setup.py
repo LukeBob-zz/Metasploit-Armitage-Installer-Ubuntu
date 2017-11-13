@@ -35,24 +35,30 @@ def Install_Dependencys():
 def Install_Ruby():
     print("\n\t [#] Installing Ruby [#]\n\n")
     time.sleep(2)
-    Rub =  "curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -"
-    Rub1 = "curl -L https://get.rvm.io | bash -s stable" 
+  
     
-    Rub2 = """
-    source /etc/profile.d/rvm.sh
-    echo 'source /etc/profile.d/rvm.sh' >> ~/.bashrc
-    source ~/.bashrc
+    Rub = """
+    cd ~
+    git clone git://github.com/sstephenson/rbenv.git .rbenv
+   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+    exec $SHELL
 
-    rvm use 2.4.2 --default
+    git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+    echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+
+  
+    git clone git://github.com/dcarley/rbenv-sudo.git ~/.rbenv/plugins/rbenv-sudo
+
+    exec $SHELL
+
+    RUBYVERSION=$(wget https://raw.githubusercontent.com/rapid7/metasploit-framework/master/.ruby-version -q -O - )
+    rbenv install $RUBYVERSION
+    rbenv global $RUBYVERSION
     ruby -v
     """
-    
+  
     os.system(Rub)
-    time.sleep(1) ## Debugging purposes
-    os.system(Rub1)
-    time.sleep(1)
-    print("trying source")
-    os.system(Rub2)
     print("\n\t [#] Ruby Installed [#]\n\n")
     time.sleep(2)
 
@@ -113,7 +119,6 @@ def Install_Armitage():
     sh -c 'echo export MSF_DATABASE_CONFIG=/opt/metasploit-framework/config/database.yml >> /etc/profile'
     source /etc/profile
     """
-    os.system(chdir)
     os.system(cet)
     print("\n\t [#] Armitage Installed [#]\n\n")
     time.sleep(2)
