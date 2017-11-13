@@ -73,18 +73,6 @@ def Install_Nmap():
     print("\n\t [#] Installed Nmap [#]\n\n")
     time.sleep(2)
 
-def Configure_Postgresql():
-    print("\n\t [#] Configuring Postgresql For Metasploit [#]\n\n")
-    time.sleep(2)
-    post = """
-    su postgres
-    createuser msf -P -S -R -D
-    createdb -O msf msf
-    """
-
-    os.system(post)
-    print("\n\t [#] Postgresql Configured [#]\n\n")
-    time.sleep(2)
 
 def Install_Metasploit():
     print("\n\t [#] Installing Metasploit Framework [#]\n\n")
@@ -138,7 +126,7 @@ def main():
         Install_Ruby()
         Install_Nmap() 
         Install_Metasploit()
-        Configure_Postgresql()
+        #Configure_Postgresql()
         Install_Armitage()
     except: raise
     exit(0)
