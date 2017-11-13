@@ -90,6 +90,7 @@ def Install_Armitage():
     os.system(armit)
 
     print("\n\t [#] Armitage Installed [#]\n\n")
+    os.system("exit")
     time.sleep(2)
 
 def main():
