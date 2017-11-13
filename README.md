@@ -33,3 +33,7 @@ Metasploit and Armitage installer for Ubuntu 16.04
      first start the postgresql database by issuing "service postgresql restart"
      then start metasploit by issuing "msfconsole"
      after that you can access armitage by issuing "armitage" and changing the password on the ui to msf. :)
+     
+     
+# Liscence
+    Copyright (c) 2017 LukeBob (MIT)
