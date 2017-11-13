@@ -100,11 +100,7 @@ def main():
         Install_Metasploit()
         Install_Armitage()
     except: raise
-    exit(0)
 
-    os.system("msfconsole")
-    time.sleep(5)
-    os.system("exit")
     print("\n\tDefault Armitage User:msf Pass:msf\n")
     time.sleep(3)
   
