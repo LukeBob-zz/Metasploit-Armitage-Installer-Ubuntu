@@ -134,7 +134,8 @@ def main():
     os.system("msfconsole")
     time.sleep(5)
     os.system("exit")
-    print("\n\tDefault Armitage User:msf Pass:msf\n\n")
+    print("\n\tDefault Armitage User:msf Pass:msf\n")
+    print("\n\tDONT FORGET TO RUN bash postg.sh or Metasploit wont be able to connect to the database!!!\n\n")
     print("\n\t Metasploit-Framework\n\t Successfully Installed\n\t System Needs To Be Rebooted\n")
 
 
