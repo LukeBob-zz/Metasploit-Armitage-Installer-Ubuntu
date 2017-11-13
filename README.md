@@ -4,3 +4,4 @@ metasploit and armitage installer for ubuntu 16.04 and debian based distros
 
 # Simply Run
     python3 setup.py
+    bash postg.sh
