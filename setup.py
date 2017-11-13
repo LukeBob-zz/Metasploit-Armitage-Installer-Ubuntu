@@ -7,7 +7,7 @@
 import os
 import time
 import subprocess
-import inspect, os
+import inspect
 
 this_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) # script directory
 
