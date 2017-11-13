@@ -39,4 +39,4 @@ Metasploit and Armitage installer for Ubuntu 16.04
 
 
 # Liscence
-    Copyright (c) 2017 LukeBob (MIT)
+Copyright (c) 2017 LukeBob (MIT)
