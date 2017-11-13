@@ -21,6 +21,10 @@ Metasploit and Armitage installer for Ubuntu 16.04
      cat database.yml > /opt/metasploit-framework/config/database.yml
      sh -c "echo export MSF_DATABASE_CONFIG=/opt/metasploit-framework/config/database.yml >> /etc/profile"
      source /etc/profile
+     bash postg.sh
      
 # Finally
-     bash postg.sh
+     you will need to reboot your machine/vm 
+     first start the postgresql database by issuing "service postgresql restart"
+     then start metasploit by issuing msfconsole
+     after that you can access armitage by issuing armitage and changing the password on the ui to msf. :)
