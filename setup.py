@@ -89,12 +89,6 @@ def Install_Armitage():
     """
     os.system(armit)
 
-    cet   = """
-    cat database.yml > /opt/metasploit-framework/config/database.yml
-    sh -c 'echo export MSF_DATABASE_CONFIG=/opt/metasploit-framework/config/database.yml >> /etc/profile'
-    source /etc/profile
-    """
-    os.system(cet)
     print("\n\t [#] Armitage Installed [#]\n\n")
     time.sleep(2)
 
@@ -112,8 +106,8 @@ def main():
     time.sleep(5)
     os.system("exit")
     print("\n\tDefault Armitage User:msf Pass:msf\n")
-    print("\n\tDONT FORGET TO RUN bash postg.sh or Metasploit wont be able to connect to the database!!!\n\n")
-    print("\n\t Metasploit-Framework\n\t Successfully Installed\n\t System Needs To Be Rebooted\n")
+    time.sleep(3)
+  
 
 
 if __name__ == '__main__':
