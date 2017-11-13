@@ -35,16 +35,20 @@ def Install_Dependencys():
 def Install_Ruby():
     print("\n\t [#] Installing Ruby [#]\n\n")
     time.sleep(2)
-  
-    
     Rub = """
     gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
     curl -sSL https://get.rvm.io -o rvm.sh
     cat rvm.sh | bash -s stable
     """
-  
+    Rub2 = """
+    RUBYVERSION=$(wget https://raw.githubusercontent.com/rapid7/metasploit-framework/master/.ruby-version -q -O - )
+    rvm install $RUBYVERSION
+    rvm use $RUBYVERSION --default
+    ruby -v
+    """
     os.system(Rub)
     subprocess.call("./rvm_sorce.sh", shell=true)
+    os.system(Rub2)
     print("\n\t [#] Ruby Installed [#]\n\n")
     time.sleep(2)
 
