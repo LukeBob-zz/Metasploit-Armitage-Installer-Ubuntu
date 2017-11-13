@@ -2,7 +2,7 @@
 metasploit and armitage installer for ubuntu 16.04 and debian based distros
 
 
-##Simply Run##
+#Simply Run#
 
-***chmod +x setup.py***
-***./setup.py***
+***chmod +x setup.py
+***./setup.py
