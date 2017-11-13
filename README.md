@@ -22,9 +22,9 @@ Metasploit and Armitage installer for Ubuntu 16.04
      sh -c "echo export MSF_DATABASE_CONFIG=/opt/metasploit-framework/config/database.yml >> /etc/profile"
      source /etc/profile
      su postgres    
-     createuser msf -P -S -R -D  ## you might see error could not switch directorys insufficient permissions, 
-     createdb -O msf msf         ## It's ok the database and user are still being made,
-     exit                        ## when prompted for a password use msf to avoid confusion
+     createuser msf -P -S -R -D    ## you might see error could not switch directorys insufficient permissions, 
+     createdb -O msf msf           ## It's ok the database and user are still being made,
+     exit                          ## when prompted for a password use msf to avoid confusion
                             
      
  
