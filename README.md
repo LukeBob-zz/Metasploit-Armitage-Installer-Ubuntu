@@ -15,4 +15,11 @@ metasploit and armitage installer for ubuntu 16.04
     
 # Then Simply Run
     python3 setup.py
-    bash postg.sh
+    
+# Next
+     cat database.yml > /opt/metasploit-framework/config/database.yml
+     echo export MSF_DATABASE_CONFIG=/opt/metasploit-framework/config/database.yml >> /etc/profile
+     source /etc/profile
+     
+# Finally
+     bash postg.sh
